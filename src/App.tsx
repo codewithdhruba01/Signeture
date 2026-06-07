@@ -39,24 +39,24 @@ function App() {
               <h1 className="text-xl font-bold tracking-tight text-white">Signature Studio</h1>
             </div>
           </div>
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2">
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 rounded-xl transition-all"
+              className="p-2 transition-all"
               aria-label="GitHub"
             >
-              <GithubIcon size="18" className="!stroke-slate-400 hover:!stroke-slate-200" />
+              <GithubIcon size="18" className="!stroke-slate-400 hover:!stroke-slate-200 transition-colors" />
             </a>
             <a
               href="https://x.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 rounded-xl transition-all"
+              className="p-2 transition-all"
               aria-label="Twitter / X"
             >
-              <XIcon size="18" className="!fill-slate-400 hover:!fill-slate-200" />
+              <XIcon size="18" className="!fill-slate-400 hover:!fill-slate-200 transition-colors" />
             </a>
           </div>
         </div>
