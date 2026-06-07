@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { Sparkles, PenTool, Terminal, Layers } from 'lucide-react';
+import { Sparkles, PenTool, Layers } from 'lucide-react';
 import { SignatureStyle } from './types';
 import { SignatureControls } from './components/SignatureControls';
 import { SignaturePreview } from './components/SignaturePreview';
 import { ExportSection } from './components/ExportSection';
 import { CliInstructions } from './components/CliInstructions';
+import { GithubIcon, XIcon } from './components/icons/SocialIcons';
 
 function App() {
   const [name, setName] = useState<string>('Dhrubaraj Pati');
@@ -43,13 +44,24 @@ function App() {
               <p className="text-xs text-slate-400">Convert text to high-fidelity digital signatures</p>
             </div>
           </div>
-          <div className="hidden sm:flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <a
-              href="#cli-section"
-              className="flex items-center space-x-2 text-xs font-semibold text-slate-400 hover:text-slate-200 transition-colors bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-xl"
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 rounded-xl transition-all"
+              aria-label="GitHub"
             >
-              <Terminal className="w-3.5 h-3.5" />
-              <span>CLI Tool</span>
+              <GithubIcon size="18" className="!stroke-slate-400 hover:!stroke-slate-200" />
+            </a>
+            <a
+              href="https://x.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-slate-200 rounded-xl transition-all"
+              aria-label="Twitter / X"
+            >
+              <XIcon size="18" className="!fill-slate-400 hover:!fill-slate-200" />
             </a>
           </div>
         </div>
