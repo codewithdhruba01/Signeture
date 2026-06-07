@@ -16,7 +16,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
   style,
   setStyle,
 }) => {
-  const updateStyle = (key: keyof SignatureStyle, value: any) => {
+  const updateStyle = <K extends keyof SignatureStyle>(key: K, value: SignatureStyle[K]) => {
     setStyle((prev) => ({
       ...prev,
       [key]: value,
