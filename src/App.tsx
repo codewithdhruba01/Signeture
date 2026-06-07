@@ -6,6 +6,7 @@ import { SignaturePreview } from './components/SignaturePreview';
 import { ExportSection } from './components/ExportSection';
 import { CliInstructions } from './components/CliInstructions';
 import { GithubIcon, XIcon } from './components/icons/SocialIcons';
+import { SignatureStyleShowcase } from './components/SignatureStyleShowcase';
 
 function App() {
   const [name, setName] = useState<string>('Dhrubaraj Pati');
@@ -115,6 +116,15 @@ function App() {
             </div>
           </div>
         </div>
+        <SignatureStyleShowcase
+          name={name}
+          onApplyStyle={(partialStyle: Partial<SignatureStyle>) =>
+            setStyle((prev) => ({
+              ...prev,
+              ...partialStyle,
+            }))
+          }
+        />
       </main>
 
       {/* Footer */}
