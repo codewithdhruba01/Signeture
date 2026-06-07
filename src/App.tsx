@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Sparkles, PenTool, Layers } from 'lucide-react';
+import { Sparkles, Layers } from 'lucide-react';
 import { SignatureStyle } from './types';
 import { SignatureControls } from './components/SignatureControls';
 import { SignaturePreview } from './components/SignaturePreview';
@@ -32,17 +32,11 @@ function App() {
       <header className="border-b border-slate-900 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="p-2.5 bg-indigo-600/10 border border-indigo-500/20 text-indigo-400 rounded-2xl flex items-center justify-center">
-              <PenTool className="w-6 h-6 animate-pulse" />
+            <div className="w-9 h-9 flex items-center justify-center overflow-hidden">
+              <img src="/favicon-96x96.png" alt="Signature Studio Logo" className="w-full h-full object-contain" />
             </div>
             <div>
-              <div className="flex items-center space-x-2">
-                <h1 className="text-xl font-bold tracking-tight text-white">Signature Studio</h1>
-                <span className="bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold px-1.5 py-0.5 rounded-md uppercase tracking-wider">
-                  v1.0
-                </span>
-              </div>
-              <p className="text-xs text-slate-400">Convert text to high-fidelity digital signatures</p>
+              <h1 className="text-xl font-bold tracking-tight text-white">Signature Studio</h1>
             </div>
           </div>
           <div className="flex items-center space-x-3">
