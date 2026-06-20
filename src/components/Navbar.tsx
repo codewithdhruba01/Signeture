@@ -14,7 +14,7 @@ export function Navbar() {
         </div>
         <div className="flex items-center space-x-2">
           <a
-            href="https://github.com"
+            href="https://github.com/codewithdhruba01/Signeture"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 transition-all"
@@ -23,7 +23,7 @@ export function Navbar() {
             <GithubIcon size="18" className="!stroke-slate-400 hover:!stroke-slate-200 transition-colors" />
           </a>
           <a
-            href="https://x.com"
+            href="https://x.com/codewithdhruba"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 transition-all"
