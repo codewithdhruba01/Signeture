@@ -5,8 +5,8 @@ import { SignatureControls } from './components/SignatureControls';
 import { SignaturePreview } from './components/SignaturePreview';
 import { ExportSection } from './components/ExportSection';
 import { CliInstructions } from './components/CliInstructions';
-import { GithubIcon, XIcon } from './components/icons/SocialIcons';
 import { SignatureStyleShowcase } from './components/SignatureStyleShowcase';
+import { Navbar } from './components/Navbar';
 
 function App() {
   const [name, setName] = useState<string>('Dhrubaraj Pati');
@@ -29,38 +29,7 @@ function App() {
       <div className="absolute bottom-10 left-1/3 w-96 h-96 bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
       {/* Main Header */}
-      <header className="border-b border-slate-900 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-9 h-9 flex items-center justify-center overflow-hidden">
-              <img src="/favicon-96x96.png" alt="Signature Studio Logo" className="w-full h-full object-contain" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold tracking-tight text-white">Signature Studio</h1>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 transition-all"
-              aria-label="GitHub"
-            >
-              <GithubIcon size="18" className="!stroke-slate-400 hover:!stroke-slate-200 transition-colors" />
-            </a>
-            <a
-              href="https://x.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 transition-all"
-              aria-label="Twitter / X"
-            >
-              <XIcon size="18" className="!fill-slate-400 hover:!fill-slate-200 transition-colors" />
-            </a>
-          </div>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Page Content */}
       <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 z-10">
