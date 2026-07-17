@@ -48,7 +48,7 @@ export const ExportSection: React.FC<ExportSectionProps> = ({ name, style }) => 
     let componentName = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
     componentName = componentName.replace(/[^a-zA-Z0-9]/g, '');
     if (!componentName || /^\d/.test(componentName)) componentName = 'Signature';
-    
+
     return `import React from 'react';
 
 interface ${componentName}Props {
@@ -133,7 +133,7 @@ export default ${componentName};
       ctx.fillStyle = colorHex;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      
+
       // Draw signature name
       ctx.fillText(cleanName, canvas.width / 2, canvas.height / 2);
 
@@ -167,7 +167,7 @@ export default ${componentName};
         {/* Copy SVG Code */}
         <button
           onClick={() => handleCopy(getSVGString(), 'svg')}
-          className="group flex items-center justify-between p-4 bg-slate-950 border border-zinc-800 hover:bg-zinc-900/40 hover:border-zinc-700 rounded-xl transition-all text-left"
+          className="group flex items-center justify-between p-4 bg-neutral-900 border border-zinc-800 hover:bg-neutral-900 hover:border-zinc-700 rounded-xl transition-all text-left"
         >
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-zinc-900 text-zinc-300 rounded-lg group-hover:bg-zinc-800 group-hover:text-white transition-all">
@@ -190,7 +190,7 @@ export default ${componentName};
         {/* Copy React TSX */}
         <button
           onClick={() => handleCopy(getReactComponentString(), 'react')}
-          className="group flex items-center justify-between p-4 bg-slate-950 border border-zinc-800 hover:bg-zinc-900/40 hover:border-zinc-700 rounded-xl transition-all text-left"
+          className="group flex items-center justify-between p-4 bg-neutral-900 border border-zinc-800 hover:bg-neutral-900 hover:border-zinc-700 rounded-xl transition-all text-left"
         >
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-zinc-900 text-zinc-300 rounded-lg group-hover:bg-zinc-800 group-hover:text-white transition-all">
@@ -213,7 +213,7 @@ export default ${componentName};
         {/* Download SVG */}
         <button
           onClick={handleDownloadSVG}
-          className="group flex items-center justify-between p-4 bg-slate-950 border border-zinc-800 hover:bg-zinc-900/40 hover:border-zinc-700 rounded-xl transition-all text-left"
+          className="group flex items-center justify-between p-4 bg-neutral-900 border border-zinc-800 hover:bg-neutral-900 hover:border-zinc-700 rounded-xl transition-all text-left"
         >
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-zinc-900 text-zinc-300 rounded-lg group-hover:bg-zinc-800 group-hover:text-white transition-all">
@@ -232,7 +232,7 @@ export default ${componentName};
         {/* Download PNG */}
         <button
           onClick={handleDownloadPNG}
-          className="group flex items-center justify-between p-4 bg-slate-950 border border-zinc-800 hover:bg-zinc-900/40 hover:border-zinc-700 rounded-xl transition-all text-left"
+          className="group flex items-center justify-between p-4 bg-neutral-900 border border-zinc-800 hover:bg-neutral-900 hover:border-zinc-700 rounded-xl transition-all text-left"
         >
           <div className="flex items-center space-x-3">
             <div className="p-2 bg-zinc-900 text-zinc-300 rounded-lg group-hover:bg-zinc-800 group-hover:text-white transition-all">

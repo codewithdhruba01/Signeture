@@ -66,7 +66,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
               key={font.key}
               onClick={() => updateStyle('fontKey', font.key)}
               className={`flex flex-col justify-between items-start p-3 bg-neutral-900 border rounded-xl hover:border-zinc-700 hover:bg-zinc-900 text-left transition-all relative overflow-hidden group ${style.fontKey === font.key
-                ? 'border-zinc-700 bg-neutral-900 text-white ring-1 ring-zinc-700 shadow-lg'
+                ? 'border-zinc-700 bg-slate-900 text-white ring-1 ring-zinc-700 shadow-lg'
                 : 'border-zinc-805 border-zinc-800'
                 }`}
             >
@@ -159,7 +159,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
         {/* Size Preset Selector */}
         <div className="space-y-2">
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Font Sizing</span>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-neutral-900 p-1 rounded-xl border border-zinc-800/80">
             {SIZES.map((size) => (
               <Button
                 key={size.name}
@@ -176,7 +176,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
         {/* Spacing Selector */}
         <div className="space-y-2">
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Letter Spacing</span>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-neutral-900 p-1 rounded-xl border border-zinc-800/80">
             {SPACINGS.map((spacing) => (
               <Button
                 key={spacing.name}
@@ -193,7 +193,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
         {/* Slant Selector */}
         <div className="space-y-2">
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Font Slant</span>
-          <div className="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
+          <div className="grid grid-cols-2 gap-2 bg-neutral-900 p-1 rounded-xl border border-zinc-800/80">
             {SLANTS.map((slant) => (
               <Button
                 key={slant.name}
@@ -210,7 +210,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
         {/* Angle / Rotation Selector */}
         <div className="space-y-2">
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Rotation Angle</span>
-          <div className="grid grid-cols-4 sm:grid-cols-7 gap-1.5 bg-slate-950 p-1.5 rounded-xl border border-slate-800/80">
+          <div className="grid grid-cols-4 sm:grid-cols-7 gap-1.5 bg-neutral-900 p-1.5 rounded-xl border border-zinc-800/80">
             {ROTATIONS.map((rotation) => (
               <Button
                 key={rotation.name}

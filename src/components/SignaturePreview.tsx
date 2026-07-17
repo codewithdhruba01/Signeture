@@ -58,13 +58,13 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
           <label className="text-[10px] uppercase tracking-wider text-slate-400 font-bold flex items-center gap-1">
             <Eye className="w-3.5 h-3.5 text-indigo-400" /> Preview Context
           </label>
-          <div className="inline-flex rounded-xl border border-slate-800 bg-slate-950 divide-x divide-slate-800 overflow-x-auto whitespace-nowrap scrollbar-none max-w-full shadow-lg">
+          <div className="inline-flex rounded-xl border border-zinc-800 bg-neutral-900 divide-x divide-zinc-800 overflow-x-auto whitespace-nowrap scrollbar-none max-w-full shadow-lg">
             <button
               onClick={() => setMockup('none')}
               className={`flex-shrink-0 flex items-center space-x-1.5 px-4 py-2.5 text-xs font-semibold transition-all ${
                 mockup === 'none'
-                  ? 'bg-slate-800 text-slate-100'
-                  : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900'
+                  ? 'bg-zinc-850 text-slate-100'
+                  : 'text-slate-400 hover:text-slate-100 hover:bg-zinc-800'
               }`}
             >
               <LayoutGrid className="w-3.5 h-3.5" />
@@ -74,8 +74,8 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
               onClick={() => setMockup('document')}
               className={`flex-shrink-0 flex items-center space-x-1.5 px-4 py-2.5 text-xs font-semibold transition-all ${
                 mockup === 'document'
-                  ? 'bg-slate-800 text-slate-100'
-                  : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900'
+                  ? 'bg-zinc-850 text-slate-100'
+                  : 'text-slate-400 hover:text-slate-100 hover:bg-zinc-800'
               }`}
             >
               <FileText className="w-3.5 h-3.5" />
@@ -85,8 +85,8 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
               onClick={() => setMockup('card')}
               className={`flex-shrink-0 flex items-center space-x-1.5 px-4 py-2.5 text-xs font-semibold transition-all ${
                 mockup === 'card'
-                  ? 'bg-slate-800 text-slate-100'
-                  : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900'
+                  ? 'bg-zinc-850 text-slate-100'
+                  : 'text-slate-400 hover:text-slate-100 hover:bg-zinc-800'
               }`}
             >
               <CreditCard className="w-3.5 h-3.5" />
@@ -96,8 +96,8 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
               onClick={() => setMockup('certificate')}
               className={`flex-shrink-0 flex items-center space-x-1.5 px-4 py-2.5 text-xs font-semibold transition-all ${
                 mockup === 'certificate'
-                  ? 'bg-slate-800 text-slate-100'
-                  : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900'
+                  ? 'bg-zinc-850 text-slate-100'
+                  : 'text-slate-400 hover:text-slate-100 hover:bg-zinc-800'
               }`}
             >
               <Award className="w-3.5 h-3.5" />
@@ -112,7 +112,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
             <label className="text-[10px] uppercase tracking-wider text-slate-400 font-bold flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Canvas Theme
             </label>
-            <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-800/80 space-x-1">
+            <div className="flex bg-neutral-900 p-1 rounded-xl border border-zinc-800/80 space-x-1">
               <button
                 onClick={() => setBgTheme('grid')}
                 className={`w-8 h-8 rounded-lg border text-xs font-semibold flex items-center justify-center transition-all ${

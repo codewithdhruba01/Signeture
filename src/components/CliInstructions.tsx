@@ -63,7 +63,7 @@ export const CliInstructions: React.FC<CliInstructionsProps> = ({ name, style })
           <p className="text-xs text-slate-400">
             Launches an interactive question-and-answer prompt to customize your signature.
           </p>
-          <div className="flex items-center justify-between bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 font-mono text-sm text-slate-300">
+          <div className="flex items-center justify-between bg-neutral-900 border border-zinc-800 rounded-xl px-4 py-3 font-mono text-sm text-slate-300">
             <span className="overflow-x-auto whitespace-nowrap custom-scrollbar pb-1.5">{wizardCommand}</span>
             <button
               onClick={() => copyToClipboard(wizardCommand, 'wizard')}
@@ -83,7 +83,7 @@ export const CliInstructions: React.FC<CliInstructionsProps> = ({ name, style })
           <p className="text-xs text-slate-400">
             Instantly generates and outputs the customized signature matching your current selections.
           </p>
-          <div className="flex items-center justify-between bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 font-mono text-xs text-slate-300">
+          <div className="flex items-center justify-between bg-neutral-900 border border-zinc-800 rounded-xl px-4 py-3 font-mono text-xs text-slate-300">
             <span className="overflow-x-auto whitespace-nowrap custom-scrollbar py-1 pb-1.5">{directCommand}</span>
             <button
               onClick={() => copyToClipboard(directCommand, 'direct')}
@@ -99,7 +99,7 @@ export const CliInstructions: React.FC<CliInstructionsProps> = ({ name, style })
       {/* Integration Tips */}
       <div className="border-t border-slate-800/80 pt-5 space-y-3">
         <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider">How to import in your code:</h4>
-        <div className="bg-slate-950 border border-slate-800 rounded-xl p-4 font-mono text-xs text-slate-400 overflow-x-auto custom-scrollbar leading-relaxed">
+        <div className="bg-neutral-900 border border-zinc-800 rounded-xl p-4 font-mono text-xs text-slate-400 overflow-x-auto custom-scrollbar leading-relaxed">
           <p className="text-slate-500">// 1. Import the generated component</p>
           <p><span className="text-indigo-400">import</span> Signature <span className="text-indigo-400">from</span> <span className="text-emerald-400">'./components/Signature'</span>;</p>
           <br />
