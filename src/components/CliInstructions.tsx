@@ -24,7 +24,7 @@ export const CliInstructions: React.FC<CliInstructionsProps> = ({ name, style })
   };
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6">
+    <div className="bg-zinc-950/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 space-y-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05),_0_0_30px_rgba(255,255,255,0.02)]">
       {/* Header */}
       <div className="flex items-center space-x-3">
         <div className="p-2.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-xl">

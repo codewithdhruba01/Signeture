@@ -26,7 +26,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
   };
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 space-y-8 shadow-xl">
+    <div className="bg-zinc-950/40 backdrop-blur-md border border-white/10 rounded-3xl p-6 md:p-8 space-y-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05),_0_0_30px_rgba(255,255,255,0.02)]">
       {/* 1. Name Input */}
       <div className="space-y-3">
         <label className="text-xs font-bold text-slate-300 uppercase tracking-widest flex items-center gap-2">

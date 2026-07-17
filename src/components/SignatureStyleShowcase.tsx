@@ -128,10 +128,10 @@ export const SignatureStyleShowcase: React.FC<SignatureStyleShowcaseProps> = ({
           return (
             <div
               key={item.id}
-              className="bg-slate-900 border border-slate-800/80 rounded-3xl p-5 flex flex-col justify-between space-y-6 shadow-xl group hover:-translate-y-1 hover:border-slate-700 transition-all duration-300"
+              className="bg-zinc-950/30 backdrop-blur-md border border-white/10 rounded-3xl p-5 flex flex-col justify-between space-y-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.02)] group hover:-translate-y-1 hover:border-white/20 hover:shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),_0_10px_30px_rgba(255,255,255,0.03)] transition-all duration-300"
             >
               {/* Cursive Pad Mockup */}
-              <div className="w-full bg-slate-950 rounded-2xl aspect-[1.78/1] flex flex-col justify-center p-5 shadow-inner relative overflow-hidden select-none border border-slate-800/60">
+              <div className="w-full bg-black rounded-2xl aspect-[1.78/1] flex flex-col justify-center p-5 shadow-inner relative overflow-hidden select-none border border-zinc-900/60">
                 {/* Signature Display Center */}
                 <div className="flex-grow flex items-center justify-center relative">
                   <div className="relative">

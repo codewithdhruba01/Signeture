@@ -155,7 +155,7 @@ export default ${componentName};
   };
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-6">
+    <div className="bg-zinc-950/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 space-y-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05),_0_0_30px_rgba(255,255,255,0.02)]">
       <div>
         <h3 className="text-lg font-bold text-slate-100">Export & Download Options</h3>
         <p className="text-xs text-slate-400 mt-1">

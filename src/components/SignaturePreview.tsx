@@ -36,14 +36,14 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
   const getBackgroundClass = () => {
     switch (bgTheme) {
       case 'dark':
-        return 'bg-slate-950 border-slate-800';
+        return 'bg-black border-zinc-900';
       case 'light':
         return 'bg-white border-slate-200 text-slate-900';
       case 'gold':
         return 'bg-gradient-to-tr from-amber-950 via-slate-900 to-indigo-950 border-amber-900/30';
       case 'grid':
       default:
-        return 'bg-slate-950/40 bg-[linear-gradient(to_right,#33415510_1px,transparent_1px),linear-gradient(to_bottom,#33415510_1px,transparent_1px)] bg-[size:24px_24px] border-slate-800';
+        return 'bg-black/40 bg-[linear-gradient(to_right,#33415510_1px,transparent_1px),linear-gradient(to_bottom,#33415510_1px,transparent_1px)] bg-[size:24px_24px] border-zinc-900';
     }
   };
 
@@ -52,7 +52,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
       {getDynamicStyleTag()}
 
       {/* Tabs / Toolbar */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-slate-900 border border-slate-800 p-4 rounded-2xl">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-zinc-950/40 backdrop-blur-md border border-white/10 p-4 rounded-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.05),_0_0_20px_rgba(255,255,255,0.02)]">
         {/* Mockup Mode Selector */}
         <div className="space-y-2">
           <label className="text-[10px] uppercase tracking-wider text-slate-400 font-bold flex items-center gap-1">
@@ -163,7 +163,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
       </div>
 
       {/* Main Preview Container */}
-      <div className="flex justify-center items-center w-full min-h-[360px] p-6 md:p-10 bg-slate-900/60 border border-slate-800/80 rounded-3xl relative overflow-hidden shadow-inner">
+      <div className="flex justify-center items-center w-full min-h-[360px] p-6 md:p-10 bg-zinc-950/20 backdrop-blur-sm border border-white/10 rounded-3xl relative overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.02),_0_0_30px_rgba(255,255,255,0.02)]">
         {mockup === 'none' && (
           <div
             className={`w-full max-w-2xl h-64 border rounded-2xl flex items-center justify-center p-8 transition-all duration-500 ${getBackgroundClass()}`}
