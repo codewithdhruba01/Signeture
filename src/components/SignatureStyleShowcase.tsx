@@ -131,12 +131,12 @@ export const SignatureStyleShowcase: React.FC<SignatureStyleShowcaseProps> = ({
               className="bg-slate-900 border border-slate-800/80 rounded-3xl p-5 flex flex-col justify-between space-y-6 shadow-xl group hover:-translate-y-1 hover:border-slate-700 transition-all duration-300"
             >
               {/* Cursive Pad Mockup */}
-              <div className="w-full bg-slate-950 rounded-2xl aspect-[1.78/1] flex flex-col justify-between p-5 shadow-inner relative overflow-hidden select-none border border-slate-800/60">
+              <div className="w-full bg-slate-950 rounded-2xl aspect-[1.78/1] flex flex-col justify-center p-5 shadow-inner relative overflow-hidden select-none border border-slate-800/60">
                 {/* Signature Display Center */}
                 <div className="flex-grow flex items-center justify-center relative">
                   <div className="relative">
                     <span
-                      className={`text-slate-100 transition-all duration-300 transform inline-block text-center leading-none ${font.className} ${item.sizeClass} ${item.spacingClass} ${item.slantClass} ${item.rotateClass}`}
+                      className={`text-slate-100 transition-all duration-300 transform inline-block text-center leading-none ${font.className} text-2xl xs:text-3xl sm:text-4xl md:text-5xl ${item.spacingClass} ${item.slantClass} ${item.rotateClass}`}
                     >
                       {displayName}
                     </span>
@@ -159,18 +159,16 @@ export const SignatureStyleShowcase: React.FC<SignatureStyleShowcaseProps> = ({
                     )}
                   </div>
                 </div>
-
-                {/* Badge (bottom-left) */}
-                <div className="z-10">
-                  <span className="bg-slate-900 border border-slate-800/80 text-slate-400 text-[9px] font-bold px-3 py-1 rounded-full shadow-md uppercase tracking-wider">
-                    {item.badge}
-                  </span>
-                </div>
               </div>
 
               {/* Title & Description */}
               <div className="space-y-1.5 px-1 text-left">
-                <h4 className="text-base font-bold text-slate-200">{item.title}</h4>
+                <div className="flex items-center justify-between gap-2 flex-wrap">
+                  <h4 className="text-base font-bold text-slate-200">{item.title}</h4>
+                  <span className="bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                    {item.badge}
+                  </span>
+                </div>
                 <p className="text-xs text-slate-400 leading-relaxed font-medium">{item.description}</p>
               </div>
 

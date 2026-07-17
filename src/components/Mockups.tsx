@@ -46,15 +46,15 @@ export const DocumentMockup: React.FC<MockupProps> = ({ name, style }) => {
       </div>
 
       {/* Signature Area */}
-      <div className="pt-8 flex justify-between items-end">
-        <div className="flex flex-col">
+      <div className="pt-8 flex flex-col sm:flex-row justify-between items-center sm:items-end gap-6 sm:gap-0">
+        <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <p className="text-[10px] uppercase tracking-wider text-slate-400 font-semibold mb-1">Prepared By</p>
           <p className="text-xs font-bold text-slate-700">Signature Studio Corp</p>
           <div className="w-32 h-[1px] bg-slate-300 mt-4"></div>
           <span className="text-[9px] text-slate-400 mt-1">Authorized Representative</span>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center text-center">
           {/* Dynamic Signature */}
           <div className="h-16 flex items-center justify-center relative min-w-[150px] px-2 select-none">
             {name.trim() ? (
@@ -83,12 +83,12 @@ export const CreditCardMockup: React.FC<MockupProps> = ({ name, style }) => {
 
   // Sizing for Credit Card signature panel
   const sizeMap: Record<string, string> = {
-    'text-4xl md:text-5xl': 'text-sm md:text-base',
-    'text-5xl md:text-7xl': 'text-base md:text-lg',
-    'text-7xl md:text-8xl': 'text-lg md:text-xl',
-    'text-8xl md:text-9xl': 'text-xl md:text-2xl',
+    'text-4xl md:text-5xl': 'text-xs sm:text-sm md:text-base',
+    'text-5xl md:text-7xl': 'text-sm sm:text-base md:text-lg',
+    'text-7xl md:text-8xl': 'text-base sm:text-lg md:text-xl',
+    'text-8xl md:text-9xl': 'text-lg sm:text-xl md:text-2xl',
   };
-  const sizeClass = sizeMap[style.sizeClass] || 'text-base md:text-lg';
+  const sizeClass = sizeMap[style.sizeClass] || 'text-sm sm:text-base md:text-lg';
 
   return (
     <div className="w-full max-w-md aspect-[1.586/1] bg-gradient-to-tr from-slate-900 via-indigo-950 to-slate-900 text-white rounded-2xl shadow-2xl p-6 flex flex-col justify-between border border-slate-800/80 relative overflow-hidden select-none">
@@ -203,7 +203,7 @@ export const CertificateMockup: React.FC<MockupProps> = ({ name, style }) => {
       </div>
 
       {/* Footer / Signatures */}
-      <div className="w-full flex justify-between items-end mt-4 px-4">
+      <div className="w-full flex flex-col sm:flex-row justify-between items-center sm:items-end mt-4 gap-6 sm:gap-0 px-4">
         {/* Left Seal */}
         <div className="flex items-center space-x-2">
           <div className="w-10 h-10 border border-amber-500/40 rounded-full flex items-center justify-center bg-amber-500/5 rotate-12">
@@ -233,5 +233,4 @@ export const CertificateMockup: React.FC<MockupProps> = ({ name, style }) => {
         </div>
       </div>
     </div>
-  );
-};
+  );};

@@ -56,7 +56,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
         <label className="text-xs font-bold text-slate-300 uppercase tracking-widest flex items-center gap-2">
           <CaseSensitive className="w-4 h-4 text-indigo-400" /> 2. Choose Signature Font
         </label>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {FONTS.map((font) => (
             <button
               key={font.key}
@@ -71,7 +71,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
                 {font.name}
               </span>
               <span
-                className={`text-xl leading-none mt-2 truncate w-full transition-all text-slate-200 group-hover:text-slate-100 ${font.className}`}
+                className={`text-lg sm:text-xl leading-none mt-2 truncate w-full transition-all text-slate-200 group-hover:text-slate-100 ${font.className}`}
               >
                 {name.trim() || 'Signature'}
               </span>
@@ -114,7 +114,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
         </div>
 
         {/* Custom Color Input */}
-        <div className="flex items-center space-x-3 pt-1">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-1">
           <button
             onClick={() => {
               setStyle((prev) => ({
@@ -122,7 +122,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
                 isCustomColor: true,
               }));
             }}
-            className={`flex items-center justify-center space-x-2 px-3 py-2 bg-slate-950 border rounded-lg text-xs font-semibold transition-all ${
+            className={`flex items-center justify-center space-x-2 px-3 py-2 bg-slate-950 border rounded-lg text-xs font-semibold transition-all w-full sm:w-auto ${
               style.isCustomColor
                 ? 'border-indigo-500 text-indigo-400 shadow'
                 : 'border-slate-800 text-slate-400 hover:text-slate-300 hover:border-slate-700'
@@ -132,12 +132,12 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
             <span>Custom Hex</span>
           </button>
           {style.isCustomColor && (
-            <div className="flex items-center bg-slate-950 border border-indigo-500/40 rounded-lg px-2 py-1 flex-1">
+            <div className="flex items-center bg-slate-950 border border-indigo-500/40 rounded-lg px-3 py-1.5 flex-1 w-full">
               <input
                 type="color"
                 value={style.customColor}
                 onChange={(e) => updateStyle('customColor', e.target.value)}
-                className="w-6 h-6 border-0 bg-transparent cursor-pointer rounded p-0"
+                className="w-6 h-6 border-0 bg-transparent cursor-pointer rounded p-0 flex-shrink-0"
               />
               <input
                 type="text"
@@ -160,12 +160,12 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
         {/* Size Preset Selector */}
         <div className="space-y-2">
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Font Sizing</span>
-          <div className="grid grid-cols-4 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
             {SIZES.map((size) => (
               <button
                 key={size.name}
                 onClick={() => updateStyle('sizeClass', size.class)}
-                className={`py-1.5 px-2 rounded-lg text-[10px] font-bold transition-all text-center ${
+                className={`py-2 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
                   style.sizeClass === size.class
                     ? 'bg-indigo-600 text-white shadow-md'
                     : 'text-slate-500 hover:text-slate-300'
@@ -180,12 +180,12 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
         {/* Spacing Selector */}
         <div className="space-y-2">
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Letter Spacing</span>
-          <div className="grid grid-cols-4 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
             {SPACINGS.map((spacing) => (
               <button
                 key={spacing.name}
                 onClick={() => updateStyle('spacingClass', spacing.class)}
-                className={`py-1.5 px-2 rounded-lg text-[10px] font-bold transition-all text-center ${
+                className={`py-2 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
                   style.spacingClass === spacing.class
                     ? 'bg-indigo-600 text-white shadow-md'
                     : 'text-slate-500 hover:text-slate-300'
@@ -205,7 +205,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
               <button
                 key={slant.name}
                 onClick={() => updateStyle('slantClass', slant.class)}
-                className={`py-1.5 px-2 rounded-lg text-[10px] font-bold transition-all text-center ${
+                className={`py-2 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
                   style.slantClass === slant.class
                     ? 'bg-indigo-600 text-white shadow-md'
                     : 'text-slate-500 hover:text-slate-300'
@@ -220,12 +220,12 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
         {/* Angle / Rotation Selector */}
         <div className="space-y-2">
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Rotation Angle</span>
-          <div className="grid grid-cols-7 gap-1 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
+          <div className="grid grid-cols-4 sm:grid-cols-7 gap-1.5 bg-slate-950 p-1.5 rounded-xl border border-slate-800/80">
             {ROTATIONS.map((rotation) => (
               <button
                 key={rotation.name}
                 onClick={() => updateStyle('rotateClass', rotation.class)}
-                className={`py-1.5 rounded-lg text-[10px] font-bold transition-all text-center ${
+                className={`py-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
                   style.rotateClass === rotation.class
                     ? 'bg-indigo-600 text-white shadow-md'
                     : 'text-slate-500 hover:text-slate-300'

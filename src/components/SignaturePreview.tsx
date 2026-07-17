@@ -58,10 +58,10 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
           <label className="text-[10px] uppercase tracking-wider text-slate-400 font-bold flex items-center gap-1">
             <Eye className="w-3.5 h-3.5 text-indigo-400" /> Preview Context
           </label>
-          <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-800/80">
+          <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-800/80 overflow-x-auto whitespace-nowrap scrollbar-none gap-1 max-w-full">
             <button
               onClick={() => setMockup('none')}
-              className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-shrink-0 flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                 mockup === 'none'
                   ? 'bg-indigo-600 text-white shadow-md'
                   : 'text-slate-400 hover:text-slate-200'
@@ -72,7 +72,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
             </button>
             <button
               onClick={() => setMockup('document')}
-              className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-shrink-0 flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                 mockup === 'document'
                   ? 'bg-indigo-600 text-white shadow-md'
                   : 'text-slate-400 hover:text-slate-200'
@@ -83,7 +83,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
             </button>
             <button
               onClick={() => setMockup('card')}
-              className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-shrink-0 flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                 mockup === 'card'
                   ? 'bg-indigo-600 text-white shadow-md'
                   : 'text-slate-400 hover:text-slate-200'
@@ -94,7 +94,7 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
             </button>
             <button
               onClick={() => setMockup('certificate')}
-              className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-shrink-0 flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                 mockup === 'certificate'
                   ? 'bg-indigo-600 text-white shadow-md'
                   : 'text-slate-400 hover:text-slate-200'
