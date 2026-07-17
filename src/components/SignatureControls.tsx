@@ -2,6 +2,8 @@ import React from 'react';
 import { Type, SlidersHorizontal, Palette, CaseSensitive, Sparkles, X } from 'lucide-react';
 import { SignatureStyle } from '../types';
 import { FONTS, COLORS, SIZES, SPACINGS, SLANTS, ROTATIONS } from '../constants';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
 
 interface SignatureControlsProps {
   name: string;
@@ -31,22 +33,24 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
           <Type className="w-4 h-4 text-indigo-400" /> 1. Enter Your Name
         </label>
         <div className="relative">
-          <input
+          <Input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Type your name here..."
             maxLength={32}
-            className="w-full bg-slate-950 border border-slate-800 hover:border-slate-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-slate-100 placeholder-slate-600 rounded-xl px-4 py-3.5 pr-10 text-sm font-medium outline-none transition-all"
+            className="pr-10 py-3.5"
           />
           {name && (
-            <button
+            <Button
               onClick={() => setName('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 p-1 hover:bg-slate-800/80 rounded-md transition-colors"
+              variant="ghost"
+              size="icon"
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 p-1 h-8 w-8 rounded-md transition-colors"
               title="Clear input"
             >
               <X className="w-4 h-4" />
-            </button>
+            </Button>
           )}
         </div>
       </div>
@@ -115,22 +119,19 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
 
         {/* Custom Color Input */}
         <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-1">
-          <button
+          <Button
             onClick={() => {
               setStyle((prev) => ({
                 ...prev,
                 isCustomColor: true,
               }));
             }}
-            className={`flex items-center justify-center space-x-2 px-4 py-2.5 bg-slate-950 border rounded-xl text-xs font-semibold transition-all w-full sm:w-auto ${
-              style.isCustomColor
-                ? 'border-zinc-700 bg-zinc-800 text-white shadow'
-                : 'border-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-900 hover:border-zinc-700'
-            }`}
+            variant={style.isCustomColor ? 'default' : 'outline'}
+            className="flex items-center justify-center space-x-2 px-4 py-2.5 w-full sm:w-auto h-auto"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Custom Hex</span>
-          </button>
+          </Button>
           {style.isCustomColor && (
             <div className="flex items-center bg-slate-950 border border-zinc-800 rounded-xl px-3 py-1.5 flex-1 w-full">
               <input
@@ -162,17 +163,14 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Font Sizing</span>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
             {SIZES.map((size) => (
-              <button
+              <Button
                 key={size.name}
                 onClick={() => updateStyle('sizeClass', size.class)}
-                className={`py-2 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
-                  style.sizeClass === size.class
-                    ? 'bg-zinc-800 text-white shadow'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-900/50'
-                }`}
+                variant={style.sizeClass === size.class ? 'default' : 'outline'}
+                className="py-2 px-2 text-[10px] sm:text-xs h-auto rounded-lg"
               >
                 {size.name}
-              </button>
+              </Button>
             ))}
           </div>
         </div>
@@ -182,17 +180,14 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Letter Spacing</span>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
             {SPACINGS.map((spacing) => (
-              <button
+              <Button
                 key={spacing.name}
                 onClick={() => updateStyle('spacingClass', spacing.class)}
-                className={`py-2 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
-                  style.spacingClass === spacing.class
-                    ? 'bg-zinc-800 text-white shadow'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-900/50'
-                }`}
+                variant={style.spacingClass === spacing.class ? 'default' : 'outline'}
+                className="py-2 px-2 text-[10px] sm:text-xs h-auto rounded-lg"
               >
                 {spacing.name}
-              </button>
+              </Button>
             ))}
           </div>
         </div>
@@ -202,17 +197,14 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Font Slant</span>
           <div className="grid grid-cols-2 gap-2 bg-slate-950 p-1 rounded-xl border border-slate-800/80">
             {SLANTS.map((slant) => (
-              <button
+              <Button
                 key={slant.name}
                 onClick={() => updateStyle('slantClass', slant.class)}
-                className={`py-2 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
-                  style.slantClass === slant.class
-                    ? 'bg-zinc-800 text-white shadow'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-900/50'
-                }`}
+                variant={style.slantClass === slant.class ? 'default' : 'outline'}
+                className="py-2 px-2 text-[10px] sm:text-xs h-auto rounded-lg"
               >
                 {slant.name}
-              </button>
+              </Button>
             ))}
           </div>
         </div>
@@ -222,17 +214,14 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
           <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Rotation Angle</span>
           <div className="grid grid-cols-4 sm:grid-cols-7 gap-1.5 bg-slate-950 p-1.5 rounded-xl border border-slate-800/80">
             {ROTATIONS.map((rotation) => (
-              <button
+              <Button
                 key={rotation.name}
                 onClick={() => updateStyle('rotateClass', rotation.class)}
-                className={`py-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
-                  style.rotateClass === rotation.class
-                    ? 'bg-zinc-800 text-white shadow'
-                    : 'text-zinc-400 hover:text-white hover:bg-zinc-900/50'
-                }`}
+                variant={style.rotateClass === rotation.class ? 'default' : 'outline'}
+                className="py-2 rounded-lg text-[10px] sm:text-xs h-auto rounded-lg"
               >
                 {rotation.name}
-              </button>
+              </Button>
             ))}
           </div>
         </div>
