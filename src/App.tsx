@@ -33,7 +33,7 @@ function App() {
       <Navbar />
 
       {/* Page Content */}
-      <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 z-10">
+      <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-8 md:pt-32 md:pb-12 z-10">
         {/* Banner Intro */}
         <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12 space-y-3">
           <div className="inline-flex items-center space-x-1.5 bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs px-2.5 py-1 rounded-full font-semibold">

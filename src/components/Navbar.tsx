@@ -2,7 +2,7 @@ import { GithubIcon, XIcon } from './icons/SocialIcons';
 
 export function Navbar() {
   return (
-    <header className="border-b border-slate-900 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-50">
+    <header className="border-b border-slate-900 bg-slate-950/80 backdrop-blur-xl fixed top-0 inset-x-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="w-9 h-9 flex items-center justify-center overflow-hidden">
