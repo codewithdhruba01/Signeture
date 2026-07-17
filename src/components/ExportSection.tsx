@@ -167,10 +167,10 @@ export default ${componentName};
         {/* Copy SVG Code */}
         <button
           onClick={() => handleCopy(getSVGString(), 'svg')}
-          className="group flex items-center justify-between p-4 bg-slate-950 border border-slate-800 hover:border-indigo-500/40 rounded-xl transition-all text-left"
+          className="group flex items-center justify-between p-4 bg-slate-950 border border-zinc-800 hover:bg-zinc-900/40 hover:border-zinc-700 rounded-xl transition-all text-left"
         >
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-indigo-500/10 text-indigo-400 rounded-lg group-hover:bg-indigo-500/20 transition-all">
+            <div className="p-2 bg-zinc-900 text-zinc-300 rounded-lg group-hover:bg-zinc-800 group-hover:text-white transition-all">
               <Code className="w-5 h-5" />
             </div>
             <div>
@@ -190,10 +190,10 @@ export default ${componentName};
         {/* Copy React TSX */}
         <button
           onClick={() => handleCopy(getReactComponentString(), 'react')}
-          className="group flex items-center justify-between p-4 bg-slate-950 border border-slate-800 hover:border-indigo-500/40 rounded-xl transition-all text-left"
+          className="group flex items-center justify-between p-4 bg-slate-950 border border-zinc-800 hover:bg-zinc-900/40 hover:border-zinc-700 rounded-xl transition-all text-left"
         >
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-indigo-500/10 text-indigo-400 rounded-lg group-hover:bg-indigo-500/20 transition-all">
+            <div className="p-2 bg-zinc-900 text-zinc-300 rounded-lg group-hover:bg-zinc-800 group-hover:text-white transition-all">
               <FileCode className="w-5 h-5" />
             </div>
             <div>
@@ -213,10 +213,10 @@ export default ${componentName};
         {/* Download SVG */}
         <button
           onClick={handleDownloadSVG}
-          className="group flex items-center justify-between p-4 bg-slate-950 border border-slate-800 hover:border-emerald-500/40 rounded-xl transition-all text-left"
+          className="group flex items-center justify-between p-4 bg-slate-950 border border-zinc-800 hover:bg-zinc-900/40 hover:border-zinc-700 rounded-xl transition-all text-left"
         >
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg group-hover:bg-emerald-500/20 transition-all">
+            <div className="p-2 bg-zinc-900 text-zinc-300 rounded-lg group-hover:bg-zinc-800 group-hover:text-white transition-all">
               <Download className="w-5 h-5" />
             </div>
             <div>
@@ -232,10 +232,10 @@ export default ${componentName};
         {/* Download PNG */}
         <button
           onClick={handleDownloadPNG}
-          className="group flex items-center justify-between p-4 bg-slate-950 border border-slate-800 hover:border-emerald-500/40 rounded-xl transition-all text-left"
+          className="group flex items-center justify-between p-4 bg-slate-950 border border-zinc-800 hover:bg-zinc-900/40 hover:border-zinc-700 rounded-xl transition-all text-left"
         >
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-emerald-500/10 text-emerald-400 rounded-lg group-hover:bg-emerald-500/20 transition-all">
+            <div className="p-2 bg-zinc-900 text-zinc-300 rounded-lg group-hover:bg-zinc-800 group-hover:text-white transition-all">
               <Image className="w-5 h-5" />
             </div>
             <div>

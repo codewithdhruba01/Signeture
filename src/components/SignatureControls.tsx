@@ -61,10 +61,10 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
             <button
               key={font.key}
               onClick={() => updateStyle('fontKey', font.key)}
-              className={`flex flex-col justify-between items-start p-3 bg-slate-950 border rounded-xl hover:border-slate-700/80 text-left transition-all relative overflow-hidden group ${
+              className={`flex flex-col justify-between items-start p-3 bg-slate-950 border rounded-xl hover:border-zinc-700 hover:bg-zinc-900/10 text-left transition-all relative overflow-hidden group ${
                 style.fontKey === font.key
-                  ? 'border-indigo-600 ring-1 ring-indigo-600 shadow-lg shadow-indigo-950/20'
-                  : 'border-slate-800/85'
+                  ? 'border-zinc-700 bg-zinc-800 text-white ring-1 ring-zinc-700 shadow-lg'
+                  : 'border-zinc-805 border-zinc-800'
               }`}
             >
               <span className="text-[10px] text-slate-500 font-semibold group-hover:text-slate-400 transition-colors">
@@ -122,17 +122,17 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
                 isCustomColor: true,
               }));
             }}
-            className={`flex items-center justify-center space-x-2 px-3 py-2 bg-slate-950 border rounded-lg text-xs font-semibold transition-all w-full sm:w-auto ${
+            className={`flex items-center justify-center space-x-2 px-4 py-2.5 bg-slate-950 border rounded-xl text-xs font-semibold transition-all w-full sm:w-auto ${
               style.isCustomColor
-                ? 'border-indigo-500 text-indigo-400 shadow'
-                : 'border-slate-800 text-slate-400 hover:text-slate-300 hover:border-slate-700'
+                ? 'border-zinc-700 bg-zinc-800 text-white shadow'
+                : 'border-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-900 hover:border-zinc-700'
             }`}
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Custom Hex</span>
           </button>
           {style.isCustomColor && (
-            <div className="flex items-center bg-slate-950 border border-indigo-500/40 rounded-lg px-3 py-1.5 flex-1 w-full">
+            <div className="flex items-center bg-slate-950 border border-zinc-800 rounded-xl px-3 py-1.5 flex-1 w-full">
               <input
                 type="color"
                 value={style.customColor}
@@ -167,8 +167,8 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
                 onClick={() => updateStyle('sizeClass', size.class)}
                 className={`py-2 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
                   style.sizeClass === size.class
-                    ? 'bg-indigo-600 text-white shadow-md'
-                    : 'text-slate-500 hover:text-slate-300'
+                    ? 'bg-zinc-800 text-white shadow'
+                    : 'text-zinc-400 hover:text-white hover:bg-zinc-900/50'
                 }`}
               >
                 {size.name}
@@ -187,8 +187,8 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
                 onClick={() => updateStyle('spacingClass', spacing.class)}
                 className={`py-2 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
                   style.spacingClass === spacing.class
-                    ? 'bg-indigo-600 text-white shadow-md'
-                    : 'text-slate-500 hover:text-slate-300'
+                    ? 'bg-zinc-800 text-white shadow'
+                    : 'text-zinc-400 hover:text-white hover:bg-zinc-900/50'
                 }`}
               >
                 {spacing.name}
@@ -207,8 +207,8 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
                 onClick={() => updateStyle('slantClass', slant.class)}
                 className={`py-2 px-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
                   style.slantClass === slant.class
-                    ? 'bg-indigo-600 text-white shadow-md'
-                    : 'text-slate-500 hover:text-slate-300'
+                    ? 'bg-zinc-800 text-white shadow'
+                    : 'text-zinc-400 hover:text-white hover:bg-zinc-900/50'
                 }`}
               >
                 {slant.name}
@@ -227,8 +227,8 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
                 onClick={() => updateStyle('rotateClass', rotation.class)}
                 className={`py-2 rounded-lg text-[10px] sm:text-xs font-bold transition-all text-center ${
                   style.rotateClass === rotation.class
-                    ? 'bg-indigo-600 text-white shadow-md'
-                    : 'text-slate-500 hover:text-slate-300'
+                    ? 'bg-zinc-800 text-white shadow'
+                    : 'text-zinc-400 hover:text-white hover:bg-zinc-900/50'
                 }`}
               >
                 {rotation.name}

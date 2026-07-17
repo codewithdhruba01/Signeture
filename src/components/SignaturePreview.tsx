@@ -58,13 +58,13 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
           <label className="text-[10px] uppercase tracking-wider text-slate-400 font-bold flex items-center gap-1">
             <Eye className="w-3.5 h-3.5 text-indigo-400" /> Preview Context
           </label>
-          <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-800/80 overflow-x-auto whitespace-nowrap scrollbar-none gap-1 max-w-full">
+          <div className="inline-flex rounded-xl border border-slate-800 bg-slate-950 divide-x divide-slate-800 overflow-x-auto whitespace-nowrap scrollbar-none max-w-full shadow-lg">
             <button
               onClick={() => setMockup('none')}
-              className={`flex-shrink-0 flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-shrink-0 flex items-center space-x-1.5 px-4 py-2.5 text-xs font-semibold transition-all ${
                 mockup === 'none'
-                  ? 'bg-indigo-600 text-white shadow-md'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-slate-800 text-slate-100'
+                  : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900'
               }`}
             >
               <LayoutGrid className="w-3.5 h-3.5" />
@@ -72,10 +72,10 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
             </button>
             <button
               onClick={() => setMockup('document')}
-              className={`flex-shrink-0 flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-shrink-0 flex items-center space-x-1.5 px-4 py-2.5 text-xs font-semibold transition-all ${
                 mockup === 'document'
-                  ? 'bg-indigo-600 text-white shadow-md'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-slate-800 text-slate-100'
+                  : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900'
               }`}
             >
               <FileText className="w-3.5 h-3.5" />
@@ -83,10 +83,10 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
             </button>
             <button
               onClick={() => setMockup('card')}
-              className={`flex-shrink-0 flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-shrink-0 flex items-center space-x-1.5 px-4 py-2.5 text-xs font-semibold transition-all ${
                 mockup === 'card'
-                  ? 'bg-indigo-600 text-white shadow-md'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-slate-800 text-slate-100'
+                  : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900'
               }`}
             >
               <CreditCard className="w-3.5 h-3.5" />
@@ -94,10 +94,10 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
             </button>
             <button
               onClick={() => setMockup('certificate')}
-              className={`flex-shrink-0 flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`flex-shrink-0 flex items-center space-x-1.5 px-4 py-2.5 text-xs font-semibold transition-all ${
                 mockup === 'certificate'
-                  ? 'bg-indigo-600 text-white shadow-md'
-                  : 'text-slate-400 hover:text-slate-200'
+                  ? 'bg-slate-800 text-slate-100'
+                  : 'text-slate-400 hover:text-slate-100 hover:bg-slate-900'
               }`}
             >
               <Award className="w-3.5 h-3.5" />
@@ -117,8 +117,8 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
                 onClick={() => setBgTheme('grid')}
                 className={`w-8 h-8 rounded-lg border text-xs font-semibold flex items-center justify-center transition-all ${
                   bgTheme === 'grid'
-                    ? 'border-indigo-500 bg-indigo-500/10 text-indigo-400'
-                    : 'border-slate-800 text-slate-400 hover:text-slate-200'
+                    ? 'border-zinc-700 bg-zinc-800 text-white'
+                    : 'border-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-900'
                 }`}
                 title="Grid Backdrop"
               >
@@ -128,8 +128,8 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
                 onClick={() => setBgTheme('dark')}
                 className={`w-8 h-8 rounded-lg border text-xs font-semibold flex items-center justify-center transition-all ${
                   bgTheme === 'dark'
-                    ? 'border-indigo-500 bg-indigo-500/10 text-indigo-400'
-                    : 'border-slate-800 text-slate-400 hover:text-slate-200'
+                    ? 'border-zinc-700 bg-zinc-800 text-white'
+                    : 'border-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-900'
                 }`}
                 title="Dark Solid"
               >
@@ -139,8 +139,8 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
                 onClick={() => setBgTheme('light')}
                 className={`w-8 h-8 rounded-lg border text-xs font-semibold flex items-center justify-center transition-all ${
                   bgTheme === 'light'
-                    ? 'border-indigo-500 bg-indigo-500/10 text-indigo-400'
-                    : 'border-slate-800 text-slate-400 hover:text-slate-200'
+                    ? 'border-zinc-700 bg-zinc-800 text-white'
+                    : 'border-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-900'
                 }`}
                 title="Light Solid"
               >
@@ -150,8 +150,8 @@ export const SignaturePreview: React.FC<SignaturePreviewProps> = ({ name, style 
                 onClick={() => setBgTheme('gold')}
                 className={`w-8 h-8 rounded-lg border text-xs font-semibold flex items-center justify-center transition-all ${
                   bgTheme === 'gold'
-                    ? 'border-indigo-500 bg-indigo-500/10 text-indigo-400'
-                    : 'border-slate-800 text-slate-400 hover:text-slate-200'
+                    ? 'border-zinc-700 bg-zinc-800 text-white'
+                    : 'border-zinc-800 text-zinc-400 hover:text-white hover:bg-zinc-900'
                 }`}
                 title="Gold Gradient"
               >

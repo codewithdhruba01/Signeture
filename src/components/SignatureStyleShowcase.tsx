@@ -182,7 +182,7 @@ export const SignatureStyleShowcase: React.FC<SignatureStyleShowcaseProps> = ({
                     spacingClass: item.spacingClass,
                   })
                 }
-                className="w-full py-3 bg-slate-950 hover:bg-indigo-600 hover:text-white border border-slate-800 hover:border-indigo-600 text-slate-300 rounded-2xl text-xs font-bold flex items-center justify-center space-x-2 transition-all cursor-pointer"
+                className="w-full py-3 bg-slate-950 hover:bg-zinc-800 hover:text-white border border-zinc-800 hover:border-zinc-700 text-zinc-300 rounded-2xl text-xs font-bold flex items-center justify-center space-x-2 transition-all cursor-pointer"
               >
                 <span>Apply to Designer</span>
                 <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
