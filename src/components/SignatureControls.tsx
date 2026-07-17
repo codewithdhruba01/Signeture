@@ -30,7 +30,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
       {/* 1. Name Input */}
       <div className="space-y-3">
         <label className="text-xs font-bold text-slate-300 uppercase tracking-widest flex items-center gap-2">
-          <Type className="w-4 h-4 text-indigo-400" /> 1. Enter Your Name
+          <Type className="w-4 h-4 text-indigo-100" /> 1. Enter Your Name
         </label>
         <div className="relative">
           <Input
@@ -46,7 +46,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
               onClick={() => setName('')}
               variant="ghost"
               size="icon"
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300 p-1 h-8 w-8 rounded-md transition-colors"
+              className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-100 hover:text-slate-300 p-1 h-8 w-8 rounded-md transition-colors"
               title="Clear input"
             >
               <X className="w-4 h-4" />
@@ -58,20 +58,19 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
       {/* 2. Font Selector */}
       <div className="space-y-3">
         <label className="text-xs font-bold text-slate-300 uppercase tracking-widest flex items-center gap-2">
-          <CaseSensitive className="w-4 h-4 text-indigo-400" /> 2. Choose Signature Font
+          <CaseSensitive className="w-4 h-4 text-indigo-100" /> 2. Choose Signature Font
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {FONTS.map((font) => (
             <button
               key={font.key}
               onClick={() => updateStyle('fontKey', font.key)}
-              className={`flex flex-col justify-between items-start p-3 bg-slate-950 border rounded-xl hover:border-zinc-700 hover:bg-zinc-900/10 text-left transition-all relative overflow-hidden group ${
-                style.fontKey === font.key
-                  ? 'border-zinc-700 bg-zinc-800 text-white ring-1 ring-zinc-700 shadow-lg'
-                  : 'border-zinc-805 border-zinc-800'
-              }`}
+              className={`flex flex-col justify-between items-start p-3 bg-neutral-900 border rounded-xl hover:border-zinc-700 hover:bg-zinc-900 text-left transition-all relative overflow-hidden group ${style.fontKey === font.key
+                ? 'border-zinc-700 bg-neutral-900 text-white ring-1 ring-zinc-700 shadow-lg'
+                : 'border-zinc-805 border-zinc-800'
+                }`}
             >
-              <span className="text-[10px] text-slate-500 font-semibold group-hover:text-slate-400 transition-colors">
+              <span className="text-[10px] text-slate-500 font-semibold transition-colors">
                 {font.name}
               </span>
               <span
@@ -89,7 +88,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
         <label className="text-xs font-bold text-slate-300 uppercase tracking-widest flex items-center gap-2">
           <Palette className="w-4 h-4 text-indigo-400" /> 3. Select Signature Color
         </label>
-        
+
         {/* Preset Colors Grid */}
         <div className="grid grid-cols-4 sm:grid-cols-8 gap-2.5">
           {COLORS.map((color) => (
@@ -102,11 +101,10 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
                   isCustomColor: false,
                 }));
               }}
-              className={`w-full aspect-square rounded-xl border flex items-center justify-center transition-all hover:scale-105 active:scale-95 ${
-                !style.isCustomColor && style.colorClass === color.class
-                  ? 'border-indigo-500 ring-2 ring-indigo-500/20'
-                  : 'border-slate-800/60'
-              }`}
+              className={`w-full aspect-square rounded-xl border flex items-center justify-center transition-all hover:scale-105 active:scale-95 ${!style.isCustomColor && style.colorClass === color.class
+                ? 'border-indigo-500 ring-2 ring-indigo-500/20'
+                : 'border-slate-800/60'
+                }`}
               style={{ backgroundColor: color.hex }}
               title={color.name}
             >
@@ -218,7 +216,7 @@ export const SignatureControls: React.FC<SignatureControlsProps> = ({
                 key={rotation.name}
                 onClick={() => updateStyle('rotateClass', rotation.class)}
                 variant={style.rotateClass === rotation.class ? 'default' : 'outline'}
-                className="py-2 rounded-lg text-[10px] sm:text-xs h-auto rounded-lg"
+                className="py-2 rounded-lg text-[10px] sm:text-xs h-auto"
               >
                 {rotation.name}
               </Button>
